@@ -84,6 +84,42 @@ build_elasticfusion()
   find . -name \*.o | xargs rm
 }
 
+# for using kinect xbox1
+build_OpenNI()
+{
+  cd $root_dir
+  mkdir kinect_xbox
+  git clone https://github.com/OpenNI/OpenNI.git
+
+  cd OpenNI/Platform/Linux/CreateRedist/
+  chmod +x RedistMaker
+  ./RedistMaker
+
+  cd Final  
+  tar -xjf OpenNI-Bin-Dev-Linux-x64-v1.5.7.10.tar.bz2
+  cd OpenNI-Bin-Dev-Linux-x64-v1.5.7.10
+  sudo ./install.sh
+}
+
+build_SensorKinect()
+{
+  cd $root_dir
+  mkdir SensorKinect
+  cd SensorKinect
+  git clone git://github.com/ph4m/SensorKinect.git
+  cd SensorKinect/Platform/Linux/CreateRedist/
+  chmod +x RedistMaker
+  ./RedistMaker
+  cd Final
+  tar -xjf Sensor-Bin-Linux-x64-v5.1.2.1.tar.bz2
+  cd Sensor-Bin-Linux-x64-v5.1.2.1
+  sudo ./install.sh
+}
+
+
+
 
 build_director
 build_elasticfusion
+build_OpenNI
+build_SensorKinect

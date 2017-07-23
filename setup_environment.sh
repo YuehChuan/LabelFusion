@@ -16,4 +16,10 @@ export FGR_BASE_DIR=$HOME/software_tools/FastGlobalRegistration
 export GOICP_BASE_DIR=$HOME/software_tools/GoICP_V1.3
 export SUPER4PCS_BASE_DIR=$HOME/software_tools/nmellado-Super4PCS-c77cc4a
 
+#LCM, libbot2, and pods 
+export PATH=/root/install/bin:$PATH
+export LD_LIBRARY_PATH=/root/install/lib:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=/root/install/lib/pkgconfig:$PKG_CONFIG_PATH
+export BOT_TICTOC=/root/install
+
 alias cdlf='cd $LABELFUSION_SOURCE_DIR'

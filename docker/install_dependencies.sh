@@ -40,6 +40,18 @@ apt-get install -y \
   python-yaml \
   sudo
 
+#dependency for kinect xbox1 build(Openni Sensorkinect stuff, and tools)
+apt-get install -y
+  vim \
+  unzip \
+  locate \
+  usbutils \
+  pkg-config \
+  doxygen \
+  graphviz \
+  mono-complete \
+  sudo
+
 
   # optional cleanup to make the docker image smaller
   # rm -rf /var/lib/apt/lists/*
